@@ -1,11 +1,23 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+// console.log("tessst");
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+let pronoun = ['the', 'our'];
+let adj = ['great', 'big'];
+let noun = ['jogger', 'racoon'];
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+let extensions = ['.es','.uy','.ve','.ar','.co','.pe','.it','.mx','.br','.py'];
+
+let dominios = [];
+
+pronoun.forEach(start => {
+    adj.forEach(mid => {
+        noun.forEach(last => {
+            extensions.forEach(ex => {
+                let domain = `${start}${mid}${last}${ex}`;
+            console.log(domain);
+            dominios.push(domain);
+            });
+        });
+    });
+});
+
+console.log(dominios);
